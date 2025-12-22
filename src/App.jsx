@@ -5,8 +5,6 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-  //add unused variable for checking build fail and blocking pr merge
-  const unusedVar = ""
 
   return (
     <>
