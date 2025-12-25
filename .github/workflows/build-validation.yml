@@ -1,11 +1,11 @@
 name: build-check
 
 on:
- pull_request:
+ push:
   branches:
    - main
 jobs:
- build:
+ build-check:
    runs-on: ubuntu-latest
 
    steps:
