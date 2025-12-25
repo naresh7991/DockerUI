@@ -20,7 +20,7 @@ There are multiple way you can deploy and run this code
       in .github\workflows a main.yml file added, which contain github action
       
       In that I define github action with to run using self-hosted runner and run when any change happen in main branch
-      (Note: Before running this you should setup your self-hosted runner, as when you create this file that also run this action)
-      
+      (Note: Before running this you should setup your self-hosted runner, as when you create this file that also run this action, you can find how to setup github self-hosted runner under repository setting tab > actions >runner)
+      (If you stop your self hosted runner in vm but github will not get any notification, So github actions still trigger but showing waiting for github action for some time and end up failing)
 
 
