@@ -12,7 +12,7 @@ jobs:
      uses: actions/checkout@v3
    
    - name: build docker image
-     run: docker build -t dockerUI:latest .
+     run: docker build -t docker-ui:latest .
    
    - name: stop old docker if exists
      run: docker stop dockerUIContainer || true
@@ -21,4 +21,4 @@ jobs:
      run: docker rm dockerUIContainer || true
 
    - name: create container with updated image
-     run: docker run -d --name dockerUIContainer -p 8080:80 dockerUI:latest
+     run: docker run -d --name dockerUIContainer -p 8080:80 docker-ui:latest
