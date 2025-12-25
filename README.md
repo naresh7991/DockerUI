@@ -15,7 +15,7 @@ There are multiple way you can deploy and run this code
       4. sh -c:  this is combine as any thing after dockerImage is consider as command for docker container. So here i am running open sh and run command npm ci  and npm run dev -- --host. (mention --host might not required i added so it will enable the port)
       (Note: this react project requires node version > 20 image. So that why mentioning node:22-alpine)
 
-## ADDED github action with self-hosted runner
+## Added github action with self-hosted runner
       In this repo I also testing how we can use github action with self hosted runner to deploy in 
       in .github\workflows a main.yml file added, which contain github action
       
@@ -23,4 +23,6 @@ There are multiple way you can deploy and run this code
       (Note: Before running this you should setup your self-hosted runner, as when you create this file that also run this action, you can find how to setup github self-hosted runner under repository setting tab > actions >runner)
       (If you stop your self hosted runner in vm but github will not get any notification, So github actions still trigger but showing waiting for github action for some time and end up failing)
 
+## Added build check github action with github runner
+      Here I added build-check action with github runner to check and validate the build on pushing changes to main branch
 
