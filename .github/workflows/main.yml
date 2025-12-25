@@ -1,0 +1,24 @@
+name: deploy with docker
+
+on:
+ push:
+  branches: [ main ]
+
+jobs:
+ deploy:
+  runs-on: self-hosted
+  steps:
+   - name: checking branch
+     uses: actions/checkout@v3
+   
+   - name: build docker image
+     run: docker build -t dockerUI:latest .
+   
+   - name: stop old docker if exists
+     run: docker stop dockerUIContainer || true
+   
+   - name: remove old docker container if exists
+     run: docker rm dockerUIContainer || true
+
+   - name: create container with updated image
+     run: docker run -d --name dockerUIContainer -p 8080:80 dockerUI:latest
