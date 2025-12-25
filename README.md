@@ -15,3 +15,4 @@ There are multiple way you can deploy and run this code
       4. sh -c:  this is combine as any thing after dockerImage is consider as command for docker container. So here i am running open sh and run command npm ci  and npm run dev -- --host. (mention --host might not required i added so it will enable the port)
       (Note: this react project requires node version > 20 image. So that why mentioning node:22-alpine)
 
+## ADDED github action with runner
